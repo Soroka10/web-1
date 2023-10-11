@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: xxx-large;
+  }
+  
+  .headers {
+    display: grid;
+    justify-self: end;
+    width: 100%;
+    justify-items: end;
+    
+  }
+  
+  h2 {
+    background-color: red;
+    border: 1px solid black;
+    border-top: 0;
+    border-right: 0;
+    margin: 0;  
+    justify-self: end;
+  }
+  
+  p {
+    margin: 10% 5% 5% 5%;
+  }
+  
+  .container {
+    display: grid;
+    gap: 3%;
+    grid-template-columns: repeat(3, 31%);
+    justify-items: center;
+    padding: 5%;
+  }
+  
+  .first, .second, .third {
+    background-color: green;
+    border: 2px solid black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  
+  @media (min-width: 993px) {
+    .container {
+      gap: 3%;
+    }
+  
+    .first, .second, .third {
+      grid-row: span 2;
+      grid-template-columns: repeat(3, 30%);
+      grid-template-rows: 10% 10%;
+      display: grid;
+      grid-template-columns: auto;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+    .grid-conteiner {
+      grid-template-columns: repeat(2, 46%);
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "first-block second-block"
+        "third-block third-block";
+      gap: 5%;
+    }
+    .first-grid-block {
+      grid-area: first-block;
+    }
+    .second-grid-block {
+      grid-area: second-block;
+    }
+    .third-grid-block {
+      grid-area: third-block;
+    }
+}
+button{
+    margin-right: 76%;
+    border-radius: 4px;
+    background-color: #5ca1e1;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    padding: 16px;
+    width: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+button:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+  
+a{
+    color: #000;
+}
+
